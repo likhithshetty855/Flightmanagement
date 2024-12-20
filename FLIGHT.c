@@ -41,16 +41,17 @@ int main()
         return 2;
     }
     //reading flight details from csv file
-    while (fscanf(fp, "%[^,],%[^,],%[^,],%[^,],%[^,],%f,%f",
-           &flights[i].flightID, &flights[i].source, &flights[i].arrivalTime,
-            &flights[i].destination, &flights[i].departureTime, &flights[i].flightTime, &flights[i].fare) == 7) 
-    {
-        i++;
-        if (i==20) 
-        {
+    char line[60];
+    while (fgets(line, sizeof(line), fp)){
+        if(sscanf(line, "%[^,],%[^,],%[^,],%[^,],%[^,],%f,%f", &flights[i].flightID, &flights[i].source, &flights[i].arrivalTime, &flights[i].destination, &flights[i].departureTime, &flights[i].flightTime, &flights[i].fare) == 7) {
+            i++;
+            if (i==20) {
             break;
+            }
         }
     }
+
+    
     i=0;
     //reading city details from csv file
     while (fscanf(fp2, "%s", c[i].cities) == 1) 
@@ -226,11 +227,11 @@ void displaysourcetodesination()
         if(strcmp(c[option-1].cities,flights[i].source)==0 && strcmp(flights[j].source,flights[i].destination)==0 && strcmp(c[option1-1].cities,flights[j].destination)==0)
         {
             verify=1;
-            printf("%s","**FLIGHT 1**");
+            printf("%s","**FLIGHT 1**\n\n");
             printf("%-10s %-10s %-10s %-10s %-10s %-10.2f %-10.2f \n",
                     flights[i].flightID, flights[i].source, flights[i].arrivalTime,
                     flights[i].destination, flights[i].departureTime, flights[i].flightTime, flights[i].fare);
-            printf("%s","**FLIGHT 2**");
+            printf("%s","\n**FLIGHT 2**\n\n");
             printf("%-10s %-10s %-10s %-10s %-10s %-10.2f %-10.2f \n",
                     flights[j].flightID, flights[j].source, flights[j].arrivalTime,
                     flights[j].destination, flights[j].departureTime, flights[j].flightTime, flights[j].fare);        
