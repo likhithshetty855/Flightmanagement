@@ -50,8 +50,6 @@ int main()
             }
         }
     }
-
-    
     i=0;
     //reading city details from csv file
     while (fscanf(fp2, "%s", c[i].cities) == 1) 
