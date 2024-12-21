@@ -419,7 +419,7 @@ int check(char name[20],char password[20])
     for(int i=0;i<countuser;i++)
     {
         //checking if given username or email is valid or not
-        if( strcmp(name,user[i].username)==0||strcmp(name,user[i].email))
+        if( strcmp(name,user[i].username)==0||strcmp(name,user[i].email)==0)
         {
             if(strcmp(password,user[i].password)==0)
             {
