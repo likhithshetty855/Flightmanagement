@@ -2,7 +2,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include <string.h>
-int countuser=10;
+int countuser=0;
 //creating a structure to store flight details
 struct Flight 
 {
@@ -416,7 +416,7 @@ void login()
 } 
 int check(char name[20],char password[20])
 {
-    for(int i=0;i<countuser;i++)
+    for(int i=0;i<=countuser;i++)
     {
         //checking if given username or email is valid or not
         if( strcmp(name,user[i].username)==0||strcmp(name,user[i].email)==0)
@@ -462,15 +462,14 @@ void createnewaccount()
     scanf("%s",&email);
     printf("%10s","Enter your password\n");
     scanf("%s",&password);
-    fprintf(fp, "%s,%s,%s\n", username, email, password);
+    fprintf(fp,"%s,%s,%s\n", username, email, password);
     for(int j=0;j<50;j++)
     {
         printf("-");
     }
     // Close the file
-    fclose(fp);
-    userdata();
+    fclose(fp);
     printf("\n%10s%s\n","Welcome!! ",username);
-    printf("10%s","How may i help you\n");
+    printf("%10s","How may i help you\n");
 }
     
