@@ -266,7 +266,7 @@ void createnewaccount()
         return ;
     } 
     fprintf(fp,"%s,%s,%s\n", username, email, password);
-    for(int j=0;j<50;j++)
+    for(int j=0;j<60;j++)
     {
         printf("-");
     }
