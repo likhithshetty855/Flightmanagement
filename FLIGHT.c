@@ -330,7 +330,7 @@ void login()
             {
                 printf("Wrong password!! Please try again\n");
                 error++;
-                if (error == 2) 
+                if (error == 3) 
                 {
                     printf("Invalid login\nMaximun number of attempts reached\n");                                   
                     do 
