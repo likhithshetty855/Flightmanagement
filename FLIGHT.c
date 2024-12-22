@@ -286,7 +286,7 @@ void login()
     }
     char name[100], pass[100], option;
     int error = 0; 
-name2:
+    name2:
     printf("Enter your username or email address:\n");
     scanf("%s", name);
     if (error == 2) {
@@ -352,9 +352,12 @@ name2:
                             printf("\nERROR: Please type [y/Y] or [n/N]: ");
                         }
                     } while (1);
-                    goto password1;
                 }
-            }
+                else
+                    {
+                    goto password1;
+                    }
+                }
         }
     }
     printf("Please Enter valid username\n");
