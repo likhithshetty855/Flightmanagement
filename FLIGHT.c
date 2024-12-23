@@ -3,6 +3,8 @@
 #include<stdlib.h>
 #include <string.h>
 int countuser=0;
+int countflight=0;
+int countplaces=0;
 //creating a structure to store flight details
 struct Flight 
 {
@@ -13,19 +15,19 @@ struct Flight
     char departureTime[10];
     float flightTime;
     float fare;
-}flights[20];
+}flights[100];
 //creating a structure to store cities
 struct city
 {
     char cities[20]; 
-}city_list[7];
+}city_list[100];
 //creating a structure to store user details
 struct userdetails
 {
     char username[100];
     char email[100];
     char password[100];
-}user[20];
+}user[50];
 //Creating prototypes for function
 void files();
 void userdata();
@@ -35,16 +37,23 @@ void login();
 void displayallflights();
 void displaysource();    
 void displaysourcetodesination();   
+int choice();
 //Main function
 int main()
 {
-    int flightn=20,choice;
+    int flightn=20;
     //fetching all files
     files();
     userdata();
     //user login
     userlogin();
     //Asking user to select option
+    choice();
+    return 0;
+}
+int choice()
+{
+    int choice;
     do
     {
         printf("Select a option\n");
@@ -52,7 +61,7 @@ int main()
         printf("2.To check all the flights from once place.\n");
         printf("3.To check all the flights from one place to another place.\n");
         printf("4.Logout\n");
-    //To verify user is giving option in intergers
+        //To verify user is giving option in intergers
         while((scanf("%d",&choice)!=1))
         {
             while(getchar()!='\n');
@@ -99,6 +108,7 @@ void files()
         if(sscanf(line1, "%[^,],%[^,],%[^,],%[^,],%[^,],%f,%f", flights[i].flightID, flights[i].source, flights[i].arrivalTime, flights[i].destination,flights[i].departureTime,&flights[i].flightTime,&flights[i].fare) == 7) 
         {
             i++;
+            countflight++;
         }
     }
     i=0;
@@ -107,6 +117,7 @@ void files()
      while (fscanf(fp2, "%s", city_list[i].cities) == 1) 
     {
         i++;
+        countplaces++;
         if (i == 7) 
         {
             break;
@@ -374,7 +385,7 @@ void displayallflights()
         printf("-");
     }
     printf("\n");
-    for (int i = 0; i < 20; i++) 
+    for (int i = 0; i < countflight; i++) 
     {
         printf("%-10s %-10s %-10s %-10s %-10s %-10.2f  %-10.2f\n",
                flights[i].flightID, flights[i].source, flights[i].arrivalTime,
@@ -393,7 +404,7 @@ void displaysource()
     //Asking user to select a source
     jump_here1:
     printf("Select the source\n");
-    for(int i=0;i<7;i++)
+    for(int i=0;i<countplaces;i++)
     {
         printf("%d.%s\n",i+1,city_list[i].cities);
     }   
@@ -405,7 +416,7 @@ void displaysource()
             printf("Error in option ,Please type respective option.\n");
         }
     }
-    if(option>=8)
+    if(option>countplaces)
     {
         printf("Please Enter different source\n");
         goto jump_here1;
@@ -419,7 +430,7 @@ void displaysource()
     }
     printf("\n");
     //Display flights
-    for(int i=0;i<20;i++)
+    for(int i=0;i<countflight;i++)
     {
         if(strcmp(city_list[option-1].cities,flights[i].source)==0)
         {
@@ -442,12 +453,12 @@ void displaysourcetodesination()
     //Asking user to select the source
     jump_here2:
     printf("Select the source\n");
-    for(int i=0;i<7;i++)
+    for(int i=0;i<countplaces;i++)
     {
         printf("%d.%s\n",i+1,city_list[i].cities);
     }   
     //To verify user is giving option in intergers
-    while((scanf("%d",&option)!=1)||option>=8)
+    while((scanf("%d",&option)!=1)||option>countplaces)
     {
         while(getchar()!='\n');
         {
@@ -466,7 +477,7 @@ void displaysourcetodesination()
         printf("%d.%s\n",i+1,city_list[i].cities);   
     }   
     //To verify user is giving option in intergers
-    while((scanf("%d",&option1)!=1)||option1>=8)
+    while((scanf("%d",&option1)!=1)||option1>countflight)
     {
         while(getchar()!='\n');
         {
@@ -489,7 +500,7 @@ void displaysourcetodesination()
     }
     printf("\n");
     //Display flights
-    for(int i=0;i<20;i++)
+    for(int i=0;i<countflight;i++)
     {
         if(strcmp(city_list[option-1].cities,flights[i].source)==0 && strcmp(city_list[option1-1].cities,flights[i].destination)==0)
         {
@@ -519,8 +530,8 @@ void displaysourcetodesination()
     }
     printf("\n");
     //Display flights
-    for(int i=0;i<20;i++)
-    for(int j=0;j<20;j++)
+    for(int i=0;i<countflight;i++)
+    for(int j=0;j<countflight;j++)
     {
         if(strcmp(city_list[option-1].cities,flights[i].source)==0 && strcmp(flights[j].source,flights[i].destination)==0 && strcmp(city_list[option1-1].cities,flights[j].destination)==0)
         {
