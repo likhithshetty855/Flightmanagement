@@ -1,0 +1,63 @@
+Country, Year, Tourist Arrivals (Millions), Expenditure (USD Billion), Preferred Destination, Avg. Spend per Tourist (USD), Growth Rate (%), Seasonal Peak Month
+USA, 2024, 79.6, 200, New York, 2518.9, 3.2, July
+France, 2024, 89.4, 58.7, Paris, 656.7, 1.5, August
+Spain, 2024, 82.8, 65.4, Barcelona, 789.9, 2.0, July
+Italy, 2024, 64.5, 47.8, Rome, 740.0, 4.5, June
+Germany, 2024, 38.0, 40.2, Berlin, 1058.4, 0.8, September
+Australia, 2024, 9.3, 27.0, Sydney, 2903.2, 2.7, December
+China, 2024, 61.4, 55.2, Beijing, 898.4, 3.3, October
+Japan, 2024, 31.2, 45.0, Tokyo, 1442.3, 5.0, April
+Thailand, 2024, 39.8, 57.6, Bangkok, 1443.6, 1.2, December
+UK, 2024, 40.0, 50.9, London, 1272.5, 2.5, July
+South Korea, 2024, 17.0, 24.3, Seoul, 1420.6, 6.0, August
+Mexico, 2024, 39.0, 22.5, Cancun, 576.9, 3.4, December
+Turkey, 2024, 51.2, 34.6, Istanbul, 676.6, 4.1, June
+India, 2024, 23.6, 30.0, New Delhi, 1275.0, 7.0, December
+Canada, 2024, 22.1, 24.9, Vancouver, 1126.7, 1.8, August
+Brazil, 2024, 6.5, 7.0, Rio de Janeiro, 1076.9, 3.2, February
+Russia, 2024, 10.1, 8.6, Moscow, 851.5, 2.1, July
+Indonesia, 2024, 16.7, 17.5, Bali, 1047.9, 5.0, August
+Egypt, 2024, 13.2, 11.4, Cairo, 863.6, 4.5, December
+USA, 2023, 80.3, 210, New York, 2611.2, 2.8, July
+France, 2023, 88.0, 60.0, Paris, 681.8, 3.0, August
+Spain, 2023, 81.2, 62.5, Barcelona, 769.6, 2.5, July
+Italy, 2023, 63.9, 50.0, Rome, 782.5, 3.8, June
+Germany, 2023, 39.4, 41.1, Berlin, 1046.2, 1.5, September
+Australia, 2023, 10.1, 28.5, Sydney, 2821.8, 2.5, December
+China, 2023, 60.2, 56.5, Beijing, 939.4, 2.5, October
+Japan, 2023, 32.1, 47.5, Tokyo, 1482.5, 4.5, April
+Thailand, 2023, 40.2, 59.0, Bangkok, 1463.9, 2.3, December
+UK, 2023, 41.2, 51.5, London, 1249.4, 1.8, July
+South Korea, 2023, 18.0, 25.5, Seoul, 1416.7, 4.5, August
+Mexico, 2023, 40.5, 23.8, Cancun, 587.7, 3.7, December
+Turkey, 2023, 52.0, 36.0, Istanbul, 692.3, 3.5, June
+India, 2023, 24.8, 32.5, New Delhi, 1314.1, 6.5, December
+Canada, 2023, 23.0, 25.0, Vancouver, 1086.9, 2.3, August
+Brazil, 2023, 7.0, 7.8, Rio de Janeiro, 1114.3, 2.7, February
+Russia, 2023, 11.5, 9.5, Moscow, 826.1, 3.3, July
+Indonesia, 2023, 18.0, 19.0, Bali, 1055.6, 4.3, August
+Egypt, 2023, 14.0, 12.0, Cairo, 857.1, 4.7, December
+USA, 2022, 81.1, 220, Los Angeles, 2716.3, 2.3, July
+France, 2022, 87.8, 59.5, Paris, 678.0, 2.8, August
+Spain, 2022, 80.1, 61.0, Barcelona, 761.8, 2.1, July
+Italy, 2022, 65.0, 52.3, Rome, 804.6, 4.2, June
+Germany, 2022, 37.8, 39.7, Berlin, 1049.5, 2.0, September
+Australia, 2022, 8.8, 26.5, Sydney, 3005.7, 2.8, December
+China, 2022, 62.1, 58.0, Shanghai, 933.9, 3.0, October
+Japan, 2022, 30.0, 44.0, Tokyo, 1466.7, 3.3, April
+Thailand, 2022, 39.5, 58.5, Phuket, 1481.1, 1.9, December
+UK, 2022, 39.5, 52.0, London, 1311.4, 2.2, July
+South Korea, 2022, 17.5, 24.0, Seoul, 1371.4, 4.1, August
+Mexico, 2022, 38.7, 22.9, Cancun, 592.2, 2.8, December
+Turkey, 2022, 53.0, 37.5, Istanbul, 707.5, 3.7, June
+India, 2022, 25.5, 33.0, New Delhi, 1294.1, 5.8, December
+Canada, 2022, 22.5, 23.5, Toronto, 1044.4, 1.5, August
+Brazil, 2022, 6.2, 6.8, Rio de Janeiro, 1096.8, 3.1, February
+Russia, 2022, 9.5, 8.0, Moscow, 842.1, 3.0, July
+Indonesia, 2022, 17.5, 19.5, Bali, 1114.3, 4.0, August
+Egypt, 2022, 12.5, 11.7, Cairo, 936.0, 5.2, December
+USA, 2021, 78.7, 205, Los Angeles, 2606.3, 2.2, July
+France, 2021, 85.6, 57.3, Paris, 670.0, 3.5, August
+Spain, 2021, 84.0, 64.0, Madrid, 761.9, 2.8, July
+Italy, 2021, 63.0, 49.5, Rome, 785.7, 4.3, June
+Germany, 2021, 40.0, 42.0, Berlin, 1050.0, 2.5, September
