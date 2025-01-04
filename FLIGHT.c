@@ -68,7 +68,7 @@ int choice()
     {
         printf("Select a option\n");
         printf("1.To check all the flights available.\n");
-        printf("2.To check all the flights from once place.\n");
+        printf("2.To check all the flights from one place.\n");
         printf("3.To check all the flights from one place to another place.\n");
         printf("4.Logout\n");
         //To verify user is giving option in intergers
